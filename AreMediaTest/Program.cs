@@ -51,6 +51,12 @@ namespace AreMediaTest
 
                 response.Close();
             }
+
+            csv = sb.ToString();
+            File.WriteAllText("JwResponse.csv", csv);
+
+            Console.WriteLine("Finished. Press any key to close.");
+            Console.ReadKey();
         }
     }
 }
